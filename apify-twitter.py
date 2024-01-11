@@ -1,21 +1,4 @@
-# from apify_client import ApifyClient
 
-# # # Initialize the ApifyClient with your API token
-# client = ApifyClient("apify_api_WImzM6OYEuoeK4KZiFw8J5C9HfCvyR0PGdX3")
-# # Prepare the Actor input
-# run_input = { 
-#             "queries": ["i still dy Sha, praise Jah"],
-#              "language": "en",
-#              "newer_than": "2023-12-01",
-#              "older_than": "2023-12-31"
-#              }
-
-# # Run the Actor and wait for it to finish
-# run = client.actor("shanes/tweet-flash").call(run_input=run_input)
-
-# # Fetch and print Actor results from the run's dataset (if there are any)
-# for item in client.dataset(run["defaultDatasetId"]).iterate_items():
-#     print(item)
 
 from flask import Flask, request, jsonify
 from apify_client import ApifyClient
@@ -36,9 +19,7 @@ def hello():
     return 'Hello, World!'
 
 
-# Initialize the ApifyClient with your API token
-# client = ApifyClient("apify_api_WImzM6OYEuoeK4KZiFw8J5C9HfCvyR0PGdX3")
-# client = ApifyClient("apify_api_Whhhx1LkAAhiPtZdIPJu2nXq4YxB4m1I2iRA")
+
 client = ApifyClient("apify_api_kN50CilImKqjOCVK5FR6vGi5nR0Yzq3Mf0r0") 
 
 # Use NLTK stopwords
