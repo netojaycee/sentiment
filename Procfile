@@ -1,1 +1,1 @@
-web: gunicorn -b 0.0.0.0:$PORT sentiment.app:app
+web: gunicorn -b 0.0.0.0:$PORT run:app
