@@ -3,9 +3,11 @@ from textblob import TextBlob
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import nltk
+import os
 
 nltk.download("stopwords")
-nltk.download("punkt")
+if not os.path.exists('/app/nltk_data/tokenizers/punkt'):
+    nltk.download("punkt")
 
 client = ApifyClient("apify_api_kN50CilImKqjOCVK5FR6vGi5nR0Yzq3Mf0r0")
 
