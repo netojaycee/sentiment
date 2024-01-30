@@ -5,8 +5,11 @@ from nltk.tokenize import word_tokenize
 import nltk
 import os
 
+nltk.data.path = ['/app/nltk_data']
+
+
 nltk.download("stopwords")
-if not os.path.exists('/app/nltk_data/tokenizers/punkt'):
+if not os.path.exists('/app/nltk_data/tokenizers'):
     nltk.download("punkt")
 
 client = ApifyClient("apify_api_kN50CilImKqjOCVK5FR6vGi5nR0Yzq3Mf0r0")
